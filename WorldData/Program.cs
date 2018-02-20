@@ -1,7 +1,7 @@
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
-namespace DayOfWeek
+namespace WorldData
 {
     public class Program
     {

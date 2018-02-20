@@ -1,0 +1,42 @@
+@{
+    Layout = "_Layout";
+}
+
+<div class="jumbotron text-center">
+    <h1>Cities and Countries</h1>
+</div>
+<div class="container text-center">
+    <div class="row">
+        <div class="col-md-3">
+        <h3>City Name</h3>
+        </div>
+        <div class="col-md-3">
+        <h3>Country Code</h3>
+        </div>
+        <div class="col-md-3">
+        <h3>District</h3>
+        </div>
+        <div class="col-md-3">
+        <h3>Population</h3>
+        </div>
+    </div>
+    @foreach (var city in Model)
+    {
+        <div class="row list">
+            <div class="col-md-3">
+            <h4>@city.GetCityName()</h4>
+            </div>
+            <div class="col-md-3">
+            <h4>@city.GetCityCountryCode()</h4>
+            </div>
+            <div class="col-md-3">
+            <h4>@city.GetCityDistrict()</h4>
+            </div>
+            <div class="col-md-3">
+            <h4>@city.GetCityPopulation()</h4>
+            </div>
+        </div>
+    }
+    <h3><a href="/cities">Go to All CITIES</a></h3>
+    <h3><a href="/countries">Return to COUNTRIES</a></h3>
+</div>
